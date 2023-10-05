@@ -1,0 +1,256 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: var(--primary-font);
+}
+
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --cyan: #1DD1A1;
+    --yellow: #FFC312;
+    --dark-gray: #626262;
+    --light-gray: #F6F6F6;
+    --golden: #F7F1E3;
+    --primary-font: 'Inter', sans-serif;
+}
+
+@font-face {
+    font-family: "Inter";
+    font-weight: 400;
+    src: url('../fonts/Inter-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Inter";
+    font-weight: 500;
+    src: url('../fonts/Inter-Medium.ttf');
+}
+
+@font-face {
+    font-family: "Inter";
+    font-weight: 600;
+    src: url('../fonts/Inter-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: "Inter";
+    font-weight: 700;
+    src: url('../fonts/Inter-Bold.ttf');
+}
+
+main {
+    width: 1280px;
+    margin: auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+header picture img {
+    width: 80px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 500;
+}
+
+header nav button {
+    width: 40px;
+    height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--white);
+    box-shadow: 1px 0 10px rgba(0, 0, 0, 0.178);
+    color: var(--cyan);
+    font-size: 18px;
+}
+
+.hero__section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 6rem 0 10rem 0;
+}
+
+.hero__section .hero__column,
+footer .footer__column {
+    width: 50%;
+}
+
+.hero__section .hero__column.content h1 {
+    font-size: 55px;
+    color: var(--black);
+    font-weight: 700;
+}
+
+.hero__section .hero__column.content p {
+    font-size: 1rem;
+    color: var(--dark-gray);
+    line-height: 26px;
+    margin: 2rem 0;
+    width: 80%;
+}
+
+.hero__section .hero__column.content .button__and__price{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.hero__column.content .button__and__price button{
+    background-color: var(--black);
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    color: var(--white);
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+    font-family: var(--primary-font);
+}
+.hero__column.content .button__and__price button i{
+    margin-left: 5px;
+}
+
+.hero__column.content .button__and__price .price{
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.hero__section .hero__column.shoe{
+    position: relative;
+}
+
+.hero__section .hero__column.shoe img {
+    width: 110%;
+    rotate: -15deg;
+    filter: drop-shadow(2px 1px 10px rgba(0, 0, 0, 0.336));
+    position: relative;
+    right: 50px;
+}
+
+.hero__section .hero__column.shoe::before{
+    content: '';
+    width: 80%;
+    aspect-ratio: 1;
+    background-color: var(--golden);
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    z-index: -1;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .footer__column.sale .badge{
+    background-color: var(--golden);
+    width: max-content;
+    font-size: 14px;
+    padding: 5px 1rem;
+    border-radius: 100px;
+    font-weight: 500;
+}
+
+footer .footer__column.sale h2{
+    font-size: 35px;
+    margin: 0.5rem 0 1.5rem 0;
+}
+
+footer .footer__column.sale .countdown__timer{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer .footer__column.sale .countdown__timer .timer__item div{
+    width: 80px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
+    font-size: 30px;
+    font-weight: 700;
+}
+
+footer .footer__column.sale .countdown__timer .timer__item label{
+    text-align: center;
+    display: block;
+    font-size: 15px;
+    margin-top: 5px;
+    color: var(--dark-gray);
+}
+
+footer .footer__column.cards{
+    display: flex;
+    gap: 1rem;
+}
+
+.footer__column.cards .shoe__card{
+    background-color: var(--light-gray);
+    border-radius: 8px;
+    padding: 1.5rem 1.3rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.1s linear;
+}
+
+.footer__column.cards .shoe__card:hover, 
+.footer__column.cards .shoe__card.active{
+    border-color: var(--cyan);
+}
+
+.footer__column.cards .shoe__card img{
+    width: 90%;
+    margin: auto;
+    display: block;
+    rotate: -15deg;
+}
+
+
+.footer__column.cards .shoe__card h4{
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 1.5rem;
+}
+
+.footer__column.cards .shoe__card .stars i{
+    color: var(--yellow);
+    font-size: 13px;
+}
+
+.footer__column.cards .shoe__card .price{
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 0.5rem;
+}
