@@ -147,7 +147,6 @@ footer .footer__column {
 .hero__section .hero__column.shoe img {
     width: 110%;
     rotate: -15deg;
-    filter: drop-shadow(2px 1px 10px rgba(0, 0, 0, 0.336));
     position: relative;
     right: 50px;
 }
