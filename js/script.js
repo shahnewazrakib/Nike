@@ -15,29 +15,31 @@ shoe__cards.forEach((card) => {
   });
 });
 
-// Set the target date to 2 months from now
-const targetDate = new Date();
-targetDate.setMonth(targetDate.getMonth() + 2);
+const countDownDate = new Date("2023-12-01 00:00:00");
 
-function updateCountdown() {
-  const currentDate = new Date();
-  const timeDifference = targetDate - currentDate;
+// Calculate the time remaining
+let timeRemaining = countDownDate - new Date();
 
-  const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-  const hours = Math.floor(
-    (timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-  );
-  const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+// Convert the time remaining to days, hours, minutes, and seconds
+let days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+let hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+let minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+let seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
-  document.getElementById("days").textContent = days;
-  document.getElementById("hours").textContent = hours;
-  document.getElementById("minutes").textContent = minutes;
-  document.getElementById("seconds").textContent = seconds;
-}
+// Update the countdown timer every second
+setInterval(function() {
 
-// Update the countdown every second
-const countdownInterval = setInterval(updateCountdown, 1000);
+  // Calculate the time remaining
+  timeRemaining = countDownDate - new Date();
 
-// Call updateCountdown initially to avoid a 1-second delay
-updateCountdown();
+  // Convert the time remaining to days, hours, minutes, and seconds
+  days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+  hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+  seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+  document.getElementById('days').textContent = days;
+  document.getElementById('hours').textContent = hours;
+  document.getElementById('minutes').textContent = minutes;
+  document.getElementById('seconds').textContent = seconds;
+}, 1000);
