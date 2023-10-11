@@ -1,0 +1,151 @@
+@media only screen and (max-width: 1440px) {
+    main {
+        width: 90%;
+    }
+
+    .hero__section .hero__column.content h1 {
+        font-size: 40px;
+    }
+
+    footer {
+        padding-bottom: 2rem;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .hero__section,
+    footer {
+        flex-direction: column-reverse;
+    }
+
+    .hero__section {
+        margin-bottom: 3rem;
+    }
+
+    .hero__section .hero__column,
+    footer .footer__column {
+        width: 100%;
+    }
+
+    .hero__section .hero__column.content {
+        text-align: center;
+        margin-top: 10rem;
+    }
+
+    .hero__section .hero__column.content p {
+        width: 100%;
+    }
+
+    .hero__section .hero__column.content .button__and__price {
+        justify-content: center;
+    }
+
+    .hero__section .hero__column.shoe img {
+        width: 100%;
+        right: unset;
+    }
+
+    footer {
+        gap: 2rem;
+    }
+
+    footer .footer__column.sale {
+        text-align: center;
+    }
+
+    footer .footer__column.sale .badge {
+        margin: auto;
+    }
+
+    footer .footer__column.sale .countdown__timer {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        position: sticky;
+        top: 0;
+        background-color: white;
+        z-index: 1000;
+    }
+
+    header .fa-bars {
+        display: block;
+    }
+
+    header nav {
+        flex-direction: column;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: white;
+        gap: 2rem;
+        justify-content: center;
+        transform-origin: top;
+        transform: scaleY(0);
+        transition: all 0.2s linear;
+        padding: 1rem;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.041);
+    }
+
+    header nav.show {
+        transform: scaleY(1);
+    }
+
+    footer .footer__column.cards {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer__column.cards .shoe__card img {
+        width: 80%;
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+    header picture img {
+        width: 60px;
+    }
+
+    header nav a {
+        font-size: 15px;
+    }
+
+    .hero__section {
+        margin: 3rem 0;
+    }
+
+    .hero__section .hero__column.content {
+        margin-top: 6rem;
+    }
+
+    .hero__section .hero__column.content h1,
+    .hero__column.content .button__and__price .price {
+        font-size: 30px;
+    }
+
+    .hero__section .hero__column.content p {
+        font-size: 15px;
+        margin: 1rem 0;
+    }
+
+    .hero__column.content .button__and__price button {
+        font-size: 14px;
+    }
+
+    footer .footer__column.sale h2 {
+        font-size: 25px;
+    }
+
+    footer .footer__column.sale .countdown__timer .timer__item div {
+        font-size: 20px;
+        width: 60px;
+        height: 50px;
+        line-height: 50px;
+    }
+}

@@ -61,6 +61,16 @@ header {
     padding: 1rem 0;
 }
 
+header .fa-bars,
+header .fa-circle-xmark{
+    font-size: 20px;
+    display: none;
+}
+
+header .fa-circle-xmark{
+    display: block;
+}
+
 header picture img {
     width: 80px;
 }
