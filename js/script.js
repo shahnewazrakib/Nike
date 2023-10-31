@@ -28,7 +28,7 @@ menu__bar.addEventListener("click", () => {
   }
 });
 
-const countDownDate = new Date("2023-12-01 00:00:00");
+const countDownDate = new Date("2023-12-31 00:00:00");
 let timeRemaining = countDownDate - new Date();
 
 let days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));

@@ -109,7 +109,7 @@
 
 @media only screen and (max-width: 480px) {
     header picture img {
-        width: 60px;
+        width: 80px;
     }
 
     header nav a {
